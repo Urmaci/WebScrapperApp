@@ -1,0 +1,353 @@
+.book-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex: 1.5;
+  width: 100%;
+}
+
+/* titles */
+
+.book-content .titles {
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.205);
+}
+
+.book-content .titles h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+/* titles __ authorAndCategoryAndEvulations */
+
+.titles .authorAndCategoryAndEvulations {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.titles .authorAndCategoryAndEvulations .author {
+  display: flex;
+  font-size: 14px;
+}
+
+.titles .authorAndCategoryAndEvulations .author h4 {
+  color: rgb(1, 104, 104);
+  margin-right: 5px;
+  font-weight: 400;
+}
+
+.titles .authorAndCategoryAndEvulations .author .humans {
+  display: flex;
+  gap: 10px;
+}
+
+.titles .authorAndCategoryAndEvulations .author .humans span {
+  color: black;
+}
+
+/* .titles .authorAndCategoryAndEvulations __ CategoryAndEvulations */
+
+.titles .authorAndCategoryAndEvulations .CategoryAndEvulations {
+  display: flex;
+  align-items: center;
+}
+
+.titles .authorAndCategoryAndEvulations .CategoryAndEvulations h4 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 5px;
+  color: rgb(1, 104, 104);
+}
+
+.titles .authorAndCategoryAndEvulations .CategoryAndEvulations .child-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* .titles .authorAndCategoryAndEvulations __ CategoryAndEvulations __ child-wrapper .category */
+
+.titles
+  .authorAndCategoryAndEvulations
+  .CategoryAndEvulations
+  .child-wrapper
+  .category
+  span {
+  font-size: 14px;
+  color: black;
+  margin-right: 8px;
+}
+
+.titles
+  .authorAndCategoryAndEvulations
+  .CategoryAndEvulations
+  .child-wrapper
+  .category
+  span:not(:last-child)::after {
+  content: "=>";
+  margin-left: 7px;
+}
+
+/* titles __ authorAndCategoryAndEvulations __ CategoryAndEvulations __ child-wrapper  __ evulations */
+
+.titles
+  .authorAndCategoryAndEvulations
+  .CategoryAndEvulations
+  .child-wrapper
+  .evulations
+  i {
+  margin: 0 1px;
+  font-size: 13px;
+  color: rgb(38, 214, 38);
+}
+
+.titles .authorAndCategoryAndEvulations span.bracket {
+  font-size: 12px;
+  color: rgb(0, 195, 195);
+}
+
+/* priceAndShortDescription */
+
+.book-content .priceAndShortDescription {
+  padding: 20px 0;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.205);
+}
+
+.priceAndShortDescription h5 {
+  font-size: 30px;
+  color: #027a36;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.priceAndShortDescription span {
+  font-size: 25px;
+}
+
+.priceAndShortDescription p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #404040;
+  font-weight: 300;
+}
+
+/* parent addToCardAndBuyNow */
+
+.book-content .addToCardAndBuyNow {
+  padding: 30px 0;
+  width: 100%;
+}
+
+/* addToCard */
+
+.book-content .addToCardAndBuyNow .addToCard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 7px;
+}
+
+/* quantity */
+
+.addToCardAndBuyNow .addToCard .quantity {
+  display: flex;
+  align-items: center;
+}
+
+.addToCardAndBuyNow .addToCard .quantity button {
+  border: none;
+  outline: none;
+  background: rgb(236, 231, 231);
+  cursor: pointer;
+  font-size: 18px;
+}
+.addToCardAndBuyNow .addToCard .quantity button.decrease {
+  padding: 15px 0px 14px 19px;
+  border-radius: 30px 0 0 30px;
+}
+.addToCardAndBuyNow .addToCard .quantity button.increase {
+  padding: 15px 19px 14px 0px;
+  border-radius: 0 30px 30px 0;
+}
+
+.addToCardAndBuyNow .addToCard .quantity input {
+  padding: 17px;
+  border: none;
+  outline: none;
+  width: 60px;
+  display: inline-block;
+  background: rgb(236, 231, 231);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* quantity end */
+
+/*  button addToCard start */
+
+.addToCardAndBuyNow .addToCard button.addToCard {
+  padding: 17px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background: #027a36;
+  display: inline-block;
+  text-align: center;
+  flex: 2;
+  cursor: pointer;
+  color: white;
+  background: #027a36;
+  position: relative;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.addToCardAndBuyNow .addToCard button.addToCard:hover {
+  background: black;
+}
+
+.addToCardAndBuyNow .addToCard button.addToCard span {
+  display: inline-block;
+  transition: all 0.2s ease-out;
+  opacity: 1;
+}
+
+.addToCardAndBuyNow .addToCard button.addToCard:hover span {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+.addToCardAndBuyNow .addToCard button.addToCard::before {
+  content: "+ Add To Basket";
+  position: absolute;
+  bottom: -20px;
+  transition: all 0.2s ease-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.addToCardAndBuyNow .addToCard button.addToCard:hover::before {
+  bottom: 50%;
+  transform: translateY(50%);
+  pointer-events: all;
+  opacity: 1;
+}
+
+/*  button addToCard end */
+
+.addToCardAndBuyNow .addToCard button.heart {
+  padding: 15px 15px 11px 15px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid rgba(128, 128, 128, 0.342);
+  transition: background 0.2s ease-in-out;
+  font-size: 17px;
+}
+
+.addToCardAndBuyNow .addToCard button.heart:hover {
+  color: white;
+  background: #027a36;
+  border-color: transparent;
+}
+
+/* buyNow */
+
+.addToCardAndBuyNow .buyNow {
+  position: relative;
+}
+
+.addToCardAndBuyNow .buyNow button {
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.462);
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.addToCardAndBuyNow .buyNow button:hover {
+  background: #027a36;
+  border-color: transparent;
+}
+
+.addToCardAndBuyNow .buyNow button span {
+  display: inline-block;
+  transition: all 0.2s ease-out;
+  opacity: 1;
+}
+
+.addToCardAndBuyNow .buyNow button:hover span {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+
+.addToCardAndBuyNow .buyNow button::before {
+  content: "Buy It Now";
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  font-size: 13.3333px;
+  transition: all 0.2s ease-out;
+  opacity: 0;
+}
+
+.addToCardAndBuyNow .buyNow button:hover::before {
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  color: white;
+  opacity: 1;
+}
+
+/* benefits */
+
+.book-content .benefits {
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.205);
+}
+
+.book-content .benefits span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.book-content .benefits span i {
+  color: rgb(169, 163, 163);
+  margin-right: 5px;
+}
+
+/* guaranteeSafeAndSecureCheckOut */
+
+.book-content .guaranteeSafeAndSecureCheckOut {
+  padding: 30px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.205);
+  text-align: center;
+  width: 100%;
+}
+
+.guaranteeSafeAndSecureCheckOut h3 {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.guaranteeSafeAndSecureCheckOut .bank-images img {
+  height: 35px;
+  margin: 0 10px;
+}

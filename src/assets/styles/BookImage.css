@@ -1,0 +1,11 @@
+.book-image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.book-image .image img {
+  width: 400px;
+  height: auto;
+}
